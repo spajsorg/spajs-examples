@@ -1,0 +1,67 @@
+<div>
+
+  <form>
+    <div>
+      <div>First Name:</div>
+      <input type="text" value="{{ firstName }}">
+    </div>
+
+    <div>
+      <div>Last Name:</div>
+      <input type="text" value="{{ lastName }}">
+    </div>
+
+    <div>
+      <div>Gender:</div>
+      <input type="radio" name="gender" value="Male"   {{:checkedIf gender '==' 'Male' }} >Male
+      &nbsp;&nbsp;
+      <input type="radio" name="gender" value="Female" {{:checkedIf gender '==' 'Female' }} >Female
+    </div>
+
+    <div>
+      <div>Account Active:</div>
+      <input type="checkbox" value="true" {{:checkedIf active }} >
+    </div>
+
+    <div>
+      <button {{:enabledIf allowUpdate }} >Update</button>
+    </div>
+
+    <!--
+      :helper boolean
+      :helper value 'condition' value
+
+      :HELPERS
+      ========
+      :checkedIf
+      :checkedIfNot
+      :enabledIf
+      :enabledIfNot
+      :disabledIf
+      :disabledIfNot
+      :selectedIf
+      :selectedIfNot
+
+      'condition'
+      ===========
+
+      '=='   :
+      '==='  :
+      '!='   :
+      '!=='  :
+      '<'    :
+      '>'    :
+      '<='   :
+      '>='   :
+      '=ic'  : equals ignore case for string compare
+      '!=ic' : not-equals ignore case for string compare
+
+      ':typeof'    : typeOf 'string' / 'object'
+      ':is'        : typeOf 'object' / 'string'
+      ':instanceof': instanceof 'Object' / 'Boolean' / 'Array'
+
+    -->
+
+  </form>
+
+</div>

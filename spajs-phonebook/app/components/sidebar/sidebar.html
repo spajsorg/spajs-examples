@@ -1,0 +1,18 @@
+<div>
+  <div class="list-group">
+    {{#:each contacts sortOn=sortOnField sortBy=sortByOrder }}
+    <div class="list-group-item contact-card" onclick="{$}viewProfile({{id}})">
+      <div class="row" >
+        <div class="col-sm-4">
+          <img src="{{picture}}" class="img img-circle img-responsive">
+        </div>
+        <div class="col-sm-8" style="overflow: hidden">
+          <p class="lead">{{:fn '{$}title' gender }} {{ first_name }}</p>
+          <p>{{ phone }} <br >
+          {{ email }} </p>
+        </div>
+      </div>
+    </div>
+    {{/:each}}
+  </div>
+</div>

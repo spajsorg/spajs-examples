@@ -1,0 +1,3 @@
+spa.$('home', {
+  target: '#main'
+});

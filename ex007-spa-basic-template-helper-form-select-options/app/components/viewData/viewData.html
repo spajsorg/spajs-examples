@@ -1,0 +1,106 @@
+<div>
+  <h2>SPA custome helper for Select</h2>
+
+  <form>
+  <pre>'Jan,Feb,Mar'</pre>
+  <select>
+    {{#:options optionsS1 }}
+        {{this}}
+      {{^}}
+        <option>Unknown</option>
+    {{/:options}}
+  </select>
+
+  <hr/>
+  <pre>'Jan,Feb,Mar'</pre>
+  <select>
+    {{#:options optionsS1 'value:index'}}
+        {{this}}
+      {{^}}
+        <option>Unknown</option>
+    {{/:options}}
+  </select>
+
+  <hr/>
+  <pre>'01=Jan,02=Feb,03=Mar'</pre>
+  <select>
+    {{#:options optionsS3 vtSplit='=' sortOn='value' sortBy='desc' fnFilter='{$}filterOptionBool' fnEmpty='{$}onOptionsEmpty' }}
+        {{this}}
+      {{^}}
+        <option>Unknown</option>
+    {{/:options}}
+  </select>
+
+  <hr/>
+  <pre>{'01': 'Jan', '02':'Feb', '03':'Mar'}</pre>
+  <select>
+    {{#:options options7 sortBy='asc' fnFilter='{$}filterOptionModify' fnEnd='{$}atOptionsEnd'}}
+      {{this}}
+    {{^}}
+      <option>Unknown</option>
+    {{/:options}}
+  </select>
+
+  <hr/>
+  <pre>[ {code:'01', name:'Jan'}, {code:'02', name:'Feb'}, {code:'03', name:'Mar'} ]</pre>
+  <select>
+  {{:options options8 'value:code;text:name;selIndex:1'}}
+  </select>
+
+  <hr/>
+  <pre>[ {code:'01', name:'Jan'}, {code:'02', name:'Feb'}, {code:'03', name:'Mar'} ]</pre>
+  <select>
+  {{:options options8 'value_text:name;selIndex:2'}}
+  </select>
+
+  <hr/>
+  <pre>[ {'01': 'Jan'}, {'02': 'Feb'}, {'03': 'Mar'} ]</pre>
+  <select>
+  {{:options options6}}
+  </select>
+
+  <hr/>
+  <pre>[ ['Jan'], ['Feb'], ['Mar'] ]</pre>
+  <select>
+  {{:options options5A }}
+  </select>
+
+  <hr/>
+  <pre>[ ['01', 'Jan'], ['02', 'Feb'], ['03', 'Mar'] ]</pre>
+  <select>
+  {{:options options5B }}
+  </select>
+
+  <hr/>
+  <pre>[ ['01', 'Jan', 'January'], ['02', 'Feb', 'February'], ['03', 'Mar', 'March'] ]</pre>
+  <select>
+  {{:options options5C 'value:1;text:2'}}
+  </select>
+
+  <hr/>
+  <pre>'Jan,Feb,Mar'</pre>
+  <select>
+  {{:options optionsS1 }}
+  </select>
+
+  <hr/>
+  <pre>'01-Jan,02-Feb,03-Mar'</pre>
+  <select>
+  {{:options optionsS2 }}
+  </select>
+
+  <hr/>
+  <pre>'01=Jan,02=Feb,03=Mar'</pre>
+  <select>
+  {{:options optionsS3 'vtSplit:='}}
+  </select>
+
+  <hr/>
+  <pre>[2000,2001,2002,2003,2004,2005]</pre>
+  <select>
+  {{:options options1 'selValue:2003'}}
+  </select>
+
+</form>
+
+</div>

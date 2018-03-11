@@ -1,0 +1,92 @@
+<div class="row">
+  {{#with contact}}
+  <div class="col-sm-3">
+    <img src="{{picture}}" class="img img-thumbnail" style="width: 100%">
+    <br>
+    <br>
+    <br>
+
+    <button class="btn btn-success btn-block" onclick="{$}saveChanges()">
+      <i class="glyphicon glyphicon-floppy-disk"></i>
+      Save changes
+    </button>
+    <button class="btn btn-warning btn-block" onclick="{$}viewContact({{id}})">
+      <i class="glyphicon glyphicon-floppy-remove"></i>
+      Cancel
+    </button>
+  </div>
+  <div class="col-sm-9">
+    <h3>Contact Details</h3>
+    <hr>
+    <form class="horizontal" id="frmContact" onsubmit="return false">
+      <input type="hidden" name="id" value="{{id}}">
+      <div class="form-group row">
+        <label class="control-label col-sm-3">Firstname</label>
+        <div class="col-sm-9">
+          <input name="first_name" value="{{first_name}}" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="control-label col-sm-3">Lastname</label>
+        <div class="col-sm-9">
+          <input name="last_name" value="{{last_name}}" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="control-label col-sm-3">Gender</label>
+        <div class="col-sm-9">
+          <label>
+            <input type="radio" name="gender" value="Male"  {{:checkedIf gender '==' 'Male' }} > Male
+          </label>
+          <label>
+            <!-- USE :checkedIf instead of :if ... -->
+            <input type="radio" name="gender" value="Female" {{#:if gender '==' 'Female' }}checked{{/:if}} >Female
+          </label>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="control-label col-sm-3">Date of birth</label>
+        <div class="col-sm-9">
+          <input name="dob" value="{{dob}}" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="control-label col-sm-3">Email</label>
+        <div class="col-sm-9">
+          <input type="email" name="email" value="{{email}}" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="control-label col-sm-3">Phone number</label>
+        <div class="col-sm-9">
+          <input text="tel" name="phone" value="{{phone}}" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="control-label col-sm-3">Address</label>
+        <div class="col-sm-9">
+          <input name="address" value="{{address}}" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="control-label col-sm-3">City</label>
+        <div class="col-sm-9">
+          <input name="city" value="{{city}}" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="control-label col-sm-3">State</label>
+        <div class="col-sm-9">
+          <input name="state" value="{{state}}" class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="control-label col-sm-3">Country</label>
+        <div class="col-sm-9">
+          <input name="country" value="{{country}}" class="form-control">
+        </div>
+      </div>
+    </form>
+  </div>
+  {{/with}}
+</div>

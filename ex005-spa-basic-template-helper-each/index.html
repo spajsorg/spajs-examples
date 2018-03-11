@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SPA Example</title>
+</head>
+<body>
+  <div data-spa-component="menu"></div>
+  <div data-spa-component="viewData" id="containerView"></div>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"          ></script>
+  <script src="//cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"  ></script>
+  <script src="//cdn.jsdelivr.net/gh/sucom/SPA.js/dist/spa-bundle.min.js" ></script>
+  
+  <script>
+  var appData = {
+    members: [
+      {
+        "id": 1,
+        "first_name": "Cordey",
+        "last_name": "Janous",
+        "email": "cjanous0@guardian.co.uk",
+        "gender": "Female"
+      }, {
+        "id": 2,
+        "first_name": "Teodoor",
+        "last_name": "Swapp",
+        "email": "tswapp1@ft.com",
+        "gender": "Male"
+      }, {
+        "id": 3,
+        "first_name": "Brynne",
+        "last_name": "MacLoughlin",
+        "email": "bmacloughlin2@npr.org",
+        "gender": "Female"
+      }, {
+        "id": 4,
+        "first_name": "Claudetta",
+        "last_name": "Shortan",
+        "email": "cshortan3@cloudflare.com",
+        "gender": "Female"
+      }, {
+        "id": 5,
+        "first_name": "Eadmund",
+        "last_name": "Way",
+        "email": "eway4@ask.com",
+        "gender": "Male"
+      }]
+  };
+  </script>
+
+</body>
+</html>

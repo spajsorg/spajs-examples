@@ -1,0 +1,85 @@
+<div class="row">
+  {{#with contact}}
+  <div class="col-sm-3">
+      <img src="{{ picture }}"
+        class="img img-thumbnail"
+        style="width: 100%">
+      <br>
+      <br>
+      <br>
+
+      <button class="btn btn-primary btn-block" onclick="{$}editContact()">
+        <span class="glyphicon glyphicon-pencil"></span>
+        Edit contact
+      </button>
+      <button onclick="{$}deleteContact()" class="btn btn-danger btn-block">
+        <span class="glyphicon glyphicon-trash"></span>
+        Delete contact
+      </button>
+    </div>
+    <div class="col-sm-9">
+      <h3>Contact Details</h3>
+      <hr>
+      <form class="horizontal">
+        <div class="form-group row">
+          <label class="control-label col-sm-3">Name</label>
+          <div class="col-sm-9">
+              {{:fn '{$sidebar}title' gender }}
+              {{ first_name }}
+              {{ last_name }}
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="control-label col-sm-3">Date of birth</label>
+          <div class="col-sm-9">
+            <!-- use moment.js and :moment dob 'formatString' -->
+              {{ dob }}
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="control-label col-sm-3">Email address</label>
+          <div class="col-sm-9">
+            {{ email }}
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="control-label col-sm-3">Phone number</label>
+          <div class="col-sm-9">
+            {{ phone }}
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="control-label col-sm-3">Address</label>
+          <div class="col-sm-9">
+            {{ address }}
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="control-label col-sm-3">City</label>
+          <div class="col-sm-9">
+            {{ city }}
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="control-label col-sm-3">State</label>
+          <div class="col-sm-9">
+            {{ state }}
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="control-label col-sm-3">Country</label>
+          <div class="col-sm-9">
+            {{ country }}
+          </div>
+        </div>
+      </form>
+    </div>
+  {{/with}}
+</div>

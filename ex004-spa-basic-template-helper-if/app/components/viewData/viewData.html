@@ -1,0 +1,45 @@
+<div>
+
+  <div>
+    <span><b>Name</b></span>:
+    <span>
+
+      <!--
+        condition: string
+
+        '=='   :
+        '==='  :
+        '!='   :
+        '!=='  :
+        '<'    :
+        '>'    :
+        '<='   :
+        '>='   :
+        '=ic'  : equals ignore case for string compare
+        '!=ic' : not-equals ignore case for string compare
+
+        ':typeof'    : typeOf 'string' / 'object'
+        ':is'        : typeOf 'object' / 'string'
+        ':instanceof': instanceof 'Object' / 'Boolean' / 'Array'
+      -->
+
+      {{#:if gender '==' 'Male' }}
+
+        Mr.
+
+      {{^}}
+
+        Ms.
+
+      {{/:if}}
+
+      {{ first_name }} {{ last_name }}
+    </span>
+  </div>
+
+  <div>
+    <span><b>eMail</b></span>:
+    <span>{{:upper email }}</span>
+  </div>
+
+</div>

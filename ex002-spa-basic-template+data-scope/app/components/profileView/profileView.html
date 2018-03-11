@@ -1,0 +1,28 @@
+<div id="c_profileView">
+
+  <div>
+    <span><b>Default Name</b></span>:
+    <p>{{ defName }}</p> <!-- this component's private data; direct access -->
+  </div>
+
+  <div>
+    <span><b>Name in profileView component</b></span>:
+    <p>{{ member.name }}</p> <!-- this component's private data; direct access -->
+  </div>
+
+  <div>
+    <span><b>Name in profileView component extended property</b></span>:
+    <p>{{ {@$}member.name }}</p> <!-- this component's extended prop eq: _global_.app.profileView.cName -->
+  </div>
+
+  <div>
+    <span><b>Name in Another Component (Note: require in 'profileView.js' )</b></span>:
+    <p> {{ {@$dataStore}member.name }} </p> <!-- [dataStore] component's extended prop -->
+  </div>
+
+  <div>
+    <span><b>Name in Global(window) Scope</b></span>:
+    <p> {{ _global_.appData.member.name }} </p> <!-- window scope appData -->
+  </div>
+
+</div>
