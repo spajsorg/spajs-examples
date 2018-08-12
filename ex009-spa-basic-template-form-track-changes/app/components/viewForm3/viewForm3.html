@@ -1,0 +1,36 @@
+<div>
+
+  <p>
+    Enable/Disable Control button on change.
+    <ul>
+      <li>add "ctrl-on-change" class in specific form control button(s)</li>
+      <li>Now "track-changes" class in &lt;FORM&gt; is optional</li>
+    </ul>
+  </p>
+
+  <!-- NOTE: NO 'track-changes' CLASS in form tag -->
+  <form>
+
+    <div class="input-group">
+      <div>First Name:</div>
+      <input type="text" name="firstname" value="{{ firstName }}">
+    </div>
+
+    <div class="input-group">
+      <div>Last Name:</div>
+      <input type="text" name="lastname" value="{{ lastName }}">
+    </div>
+
+    <div class="input-group">
+      <div>Email:</div>
+      <input type="text" name="email" value="{{ email }}">
+    </div>
+
+    <div class="input-group">
+      <!-- add "ctrl-on-change" class to contol button(s) -->
+      <button class="ctrl-on-change">Update</button>
+    </div>
+
+  </form>
+
+</div>

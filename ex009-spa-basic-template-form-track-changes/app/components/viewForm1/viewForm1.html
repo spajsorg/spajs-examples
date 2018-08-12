@@ -1,0 +1,35 @@
+<div>
+
+  <p>
+    Change values and see the color change, when the orginal value changes.
+    <ul>
+      <li>add "track-changes" class in &lt;FORM&gt; to track all elements inside the form.</li>
+      <li>define input.changed class style for changed elements</li>
+    </ul>
+  </p>
+
+  <!-- add "track-changes" class in form tag -->
+  <form class="track-changes">
+
+    <div class="input-group">
+      <div>First Name:</div>
+      <input type="text" name="firstname" value="{{ firstName }}">
+    </div>
+
+    <div class="input-group">
+      <div>Last Name:</div>
+      <input type="text" name="lastname" value="{{ lastName }}">
+    </div>
+
+    <div class="input-group">
+      <div>Email:</div>
+      <input type="text" name="email" value="{{ email }}">
+    </div>
+
+    <div class="input-group">
+      <button>Update</button>
+    </div>
+
+  </form>
+
+</div>

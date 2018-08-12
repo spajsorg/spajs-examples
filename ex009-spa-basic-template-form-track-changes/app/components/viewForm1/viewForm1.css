@@ -1,0 +1,14 @@
+.input-group {
+  box-sizing: border-box;
+}
+
+input, input:focus {
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 15px;
+}
+
+input.changed{
+  border-bottom: 1px solid orange;
+}
