@@ -1,5 +1,11 @@
 <div>
-  <h2>SPA custome helper for Select</h2>
+  <h2>SPA custome helper for Select (use SPA v2.65.3+)</h2>
+  <!--
+        opt = {value:'',text:'',value_text:'',splitBy:',',vtSplit:''
+            ,sortOn:'',sortBy:''
+            ,fnFilter:'',fnEmpty:'',fnEnd:''
+            ,selIndex:'',selValue:'',selText:''}
+   -->
 
   <form>
   <pre>'Jan,Feb,Mar'</pre>
@@ -14,7 +20,7 @@
   <hr/>
   <pre>'Jan,Feb,Mar'</pre>
   <select>
-    {{#:options optionsS1 'value:index'}}
+    {{#:options optionsS1 value='index' selValue=selectedValueA}}
         {{this}}
       {{^}}
         <option>Unknown</option>
@@ -34,7 +40,7 @@
   <hr/>
   <pre>{'01': 'Jan', '02':'Feb', '03':'Mar'}</pre>
   <select>
-    {{#:options options7 sortBy='asc' fnFilter='{$}filterOptionModify' fnEnd='{$}atOptionsEnd'}}
+    {{#:options options7 sortBy='asc' fnFilter='{$}filterOptionModify' fnEnd='{$}atOptionsEnd' selValue=selectedValueB}}
       {{this}}
     {{^}}
       <option>Unknown</option>
@@ -44,7 +50,7 @@
   <hr/>
   <pre>[ {code:'01', name:'Jan'}, {code:'02', name:'Feb'}, {code:'03', name:'Mar'} ]</pre>
   <select>
-  {{:options options8 'value:code;text:name;selIndex:1'}}
+  {{:options options8 'value:code;text:name;' selValue=(:upper selectedValueB) }}
   </select>
 
   <hr/>

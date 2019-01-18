@@ -4,6 +4,10 @@ spa.$('viewData', {
 
     //selIndex:#,selValue:*,selText:*
 
+    selectedValueA: '2',
+    selectedValueB: '02',
+    selectedValueC: 'Feb',
+
     optionsS1: 'Jan,Feb,Mar',
     /*
     :options optionsS1
